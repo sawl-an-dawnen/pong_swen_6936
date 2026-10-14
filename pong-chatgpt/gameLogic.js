@@ -102,6 +102,15 @@ export function updateGame(state, input, dt) {
   movePaddle(next.rightPaddle, keys.rightUp, keys.rightDown, dt);
 
   const ball = next.ball;
+  // A ball that already fully exited must score before advancing again.
+  if (ball.x + ball.radius < 0) {
+    scorePoint(next, 'right');
+    return next;
+  }
+  if (ball.x - ball.radius > WIDTH) {
+    scorePoint(next, 'left');
+    return next;
+  }
   let remaining = dt;
   // Each collision must consume positive time or change the active collision
   // surface; zero-time contacts are suppressed for the next event only.
