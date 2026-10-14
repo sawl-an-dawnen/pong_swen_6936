@@ -1,0 +1,241 @@
+TAP version 13
+# Subtest: PONG-T01 initial state exact public values
+ok 1 - PONG-T01 initial state exact public values
+  ---
+  duration_ms: 1.0149
+  type: 'test'
+  ...
+# Subtest: PONG-T02 left paddle moves upward 30 px
+ok 2 - PONG-T02 left paddle moves upward 30 px
+  ---
+  duration_ms: 0.348
+  type: 'test'
+  ...
+# Subtest: PONG-T03 right paddle moves downward 30 px
+ok 3 - PONG-T03 right paddle moves downward 30 px
+  ---
+  duration_ms: 0.0923
+  type: 'test'
+  ...
+# Subtest: PONG-T04 paddle y clamped at both boundaries
+ok 4 - PONG-T04 paddle y clamped at both boundaries
+  ---
+  duration_ms: 0.1167
+  type: 'test'
+  ...
+# Subtest: PONG-T05 ball advances exactly in collision-free update
+ok 5 - PONG-T05 ball advances exactly in collision-free update
+  ---
+  duration_ms: 0.1372
+  type: 'test'
+  ...
+# Subtest: PONG-T06 top wall reflects with overshoot resolution
+ok 6 - PONG-T06 top wall reflects with overshoot resolution
+  ---
+  duration_ms: 0.1574
+  type: 'test'
+  ...
+# Subtest: PONG-T07 bottom wall reflects with overshoot resolution
+ok 7 - PONG-T07 bottom wall reflects with overshoot resolution
+  ---
+  duration_ms: 0.1048
+  type: 'test'
+  ...
+# Subtest: PONG-T08 left paddle reverses vx without changing vy
+ok 8 - PONG-T08 left paddle reverses vx without changing vy
+  ---
+  duration_ms: 0.1267
+  type: 'test'
+  ...
+# Subtest: PONG-T09 right paddle reverses vx without changing vy
+ok 9 - PONG-T09 right paddle reverses vx without changing vy
+  ---
+  duration_ms: 0.1085
+  type: 'test'
+  ...
+# Subtest: PONG-T10 right exit awards left point once
+not ok 10 - PONG-T10 right exit awards left point once
+  ---
+  duration_ms: 0.8006
+  type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:63:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    +   left: 0,
+    -   left: 1,
+        right: 0
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    left: 1
+    right: 0
+  actual:
+    left: 0
+    right: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:65:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: PONG-T11 left exit awards right point once
+not ok 11 - PONG-T11 left exit awards right point once
+  ---
+  duration_ms: 0.2049
+  type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:67:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+        left: 0,
+    +   right: 0
+    -   right: 1
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    left: 0
+    right: 1
+  actual:
+    left: 0
+    right: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:69:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: PONG-T12 score resets ball, alternates serves, preserves paddles
+not ok 12 - PONG-T12 score resets ball, alternates serves, preserves paddles
+  ---
+  duration_ms: 0.2276
+  type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:71:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+        radius: 8,
+    +   vx: 200,
+    +   vy: 0,
+    +   x: 830,
+    +   y: 100
+    -   vx: -200,
+    -   vy: 150,
+    -   x: 400,
+    -   y: 250
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    x: 400
+    y: 250
+    vx: -200
+    vy: 150
+    radius: 8
+  actual:
+    x: 830
+    y: 100
+    vx: 200
+    vy: 0
+    radius: 8
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:74:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: PONG-T13 pause toggle changes status without movement
+ok 13 - PONG-T13 pause toggle changes status without movement
+  ---
+  duration_ms: 0.108
+  type: 'test'
+  ...
+# Subtest: PONG-T14 paused freezes; resume toggle does not advance
+ok 14 - PONG-T14 paused freezes; resume toggle does not advance
+  ---
+  duration_ms: 0.1267
+  type: 'test'
+  ...
+# Subtest: PONG-T15 reset restores values with fresh nested objects
+ok 15 - PONG-T15 reset restores values with fresh nested objects
+  ---
+  duration_ms: 0.1023
+  type: 'test'
+  ...
+# Subtest: PONG-T16 same state/input/dt gives identical results
+ok 16 - PONG-T16 same state/input/dt gives identical results
+  ---
+  duration_ms: 0.1208
+  type: 'test'
+  ...
+# Subtest: PONG-T17 original and nested objects are not mutated or aliased
+ok 17 - PONG-T17 original and nested objects are not mutated or aliased
+  ---
+  duration_ms: 0.1409
+  type: 'test'
+  ...
+# Subtest: PONG-T18 invalid dt throws RangeError
+ok 18 - PONG-T18 invalid dt throws RangeError
+  ---
+  duration_ms: 0.3251
+  type: 'test'
+  ...
+# Subtest: PONG-T19 opposite directions cancel for each paddle
+ok 19 - PONG-T19 opposite directions cancel for each paddle
+  ---
+  duration_ms: 0.0653
+  type: 'test'
+  ...
+# Subtest: PONG-T20 swept paddle collision prevents tunneling
+ok 20 - PONG-T20 swept paddle collision prevents tunneling
+  ---
+  duration_ms: 0.0607
+  type: 'test'
+  ...
+# Subtest: PONG-T21 dt zero causes no movement or scoring
+ok 21 - PONG-T21 dt zero causes no movement or scoring
+  ---
+  duration_ms: 0.092
+  type: 'test'
+  ...
+# Subtest: PONG-T22 moving away from paddle does not re-trigger collision
+ok 22 - PONG-T22 moving away from paddle does not re-trigger collision
+  ---
+  duration_ms: 0.0655
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 19
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 60.4667

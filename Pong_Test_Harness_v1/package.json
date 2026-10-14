@@ -1,0 +1,11 @@
+{
+  "name": "pong-independent-harness",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node runner.mjs",
+    "selftest": "node runner.mjs --impl ./validation-only/reference-gameLogic.js",
+    "negative": "node runner.mjs --impl ./validation-only/broken-gameLogic.js"
+  }
+}
