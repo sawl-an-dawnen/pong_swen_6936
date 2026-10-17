@@ -1,142 +1,538 @@
 TAP version 13
 # Subtest: PONG-T01 initial state exact public values
-ok 1 - PONG-T01 initial state exact public values
+not ok 1 - PONG-T01 initial state exact public values
   ---
-  duration_ms: 1.0554
+  duration_ms: 1.6756
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:21:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + {}
+    - {
+    -   ball: {
+    -     radius: 8,
+    -     vx: 200,
+    -     vy: 150,
+    -     x: 400,
+    -     y: 250
+    -   },
+    -   leftPaddle: {
+    -     height: 80,
+    -     width: 12,
+    -     x: 30,
+    -     y: 210
+    -   },
+    -   rightPaddle: {
+    -     height: 80,
+    -     width: 12,
+    -     x: 758,
+    -     y: 210
+    -   },
+    -   score: {
+    -     left: 0,
+    -     right: 0
+    -   },
+    -   status: 'playing'
+    - }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    leftPaddle:
+      x: 30
+      y: 210
+      width: 12
+      height: 80
+    rightPaddle:
+      x: 758
+      y: 210
+      width: 12
+      height: 80
+    ball:
+      x: 400
+      y: 250
+      vx: 200
+      vy: 150
+      radius: 8
+    score:
+      left: 0
+      right: 0
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:22:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
   ...
 # Subtest: PONG-T02 left paddle moves upward 30 px
-ok 2 - PONG-T02 left paddle moves upward 30 px
+not ok 2 - PONG-T02 left paddle moves upward 30 px
   ---
-  duration_ms: 0.3701
+  duration_ms: 0.3005
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'y')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:31:53)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
   ...
 # Subtest: PONG-T03 right paddle moves downward 30 px
-ok 3 - PONG-T03 right paddle moves downward 30 px
+not ok 3 - PONG-T03 right paddle moves downward 30 px
   ---
-  duration_ms: 0.1027
+  duration_ms: 0.081
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:33:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'y')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:34:57)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T04 paddle y clamped at both boundaries
-ok 4 - PONG-T04 paddle y clamped at both boundaries
+not ok 4 - PONG-T04 paddle y clamped at both boundaries
   ---
-  duration_ms: 0.1327
+  duration_ms: 0.1015
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:36:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:15:26)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:37:9)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T05 ball advances exactly in collision-free update
-ok 5 - PONG-T05 ball advances exactly in collision-free update
+not ok 5 - PONG-T05 ball advances exactly in collision-free update
   ---
-  duration_ms: 0.1274
+  duration_ms: 0.0723
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:42:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'x')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:44:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T06 top wall reflects with overshoot resolution
-ok 6 - PONG-T06 top wall reflects with overshoot resolution
+not ok 6 - PONG-T06 top wall reflects with overshoot resolution
   ---
-  duration_ms: 0.1544
+  duration_ms: 0.0684
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:47:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:48:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T07 bottom wall reflects with overshoot resolution
-ok 7 - PONG-T07 bottom wall reflects with overshoot resolution
+not ok 7 - PONG-T07 bottom wall reflects with overshoot resolution
   ---
-  duration_ms: 0.1144
+  duration_ms: 0.0601
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:51:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:52:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T08 left paddle reverses vx without changing vy
-ok 8 - PONG-T08 left paddle reverses vx without changing vy
+not ok 8 - PONG-T08 left paddle reverses vx without changing vy
   ---
-  duration_ms: 0.1062
+  duration_ms: 0.0682
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:55:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:56:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T09 right paddle reverses vx without changing vy
-ok 9 - PONG-T09 right paddle reverses vx without changing vy
+not ok 9 - PONG-T09 right paddle reverses vx without changing vy
   ---
-  duration_ms: 0.1076
+  duration_ms: 0.0815
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:59:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:60:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T10 right exit awards left point once
-ok 10 - PONG-T10 right exit awards left point once
+not ok 10 - PONG-T10 right exit awards left point once
   ---
-  duration_ms: 0.1436
+  duration_ms: 0.1333
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:63:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:64:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T11 left exit awards right point once
-ok 11 - PONG-T11 left exit awards right point once
+not ok 11 - PONG-T11 left exit awards right point once
   ---
-  duration_ms: 0.1287
+  duration_ms: 0.1054
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:67:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:68:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T12 score resets ball, alternates serves, preserves paddles
-ok 12 - PONG-T12 score resets ball, alternates serves, preserves paddles
+not ok 12 - PONG-T12 score resets ball, alternates serves, preserves paddles
   ---
-  duration_ms: 0.1547
+  duration_ms: 0.0935
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:71:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:72:9)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T13 pause toggle changes status without movement
-ok 13 - PONG-T13 pause toggle changes status without movement
+not ok 13 - PONG-T13 pause toggle changes status without movement
   ---
-  duration_ms: 0.1124
+  duration_ms: 0.2243
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:81:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'paused'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'paused'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:83:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T14 paused freezes; resume toggle does not advance
-ok 14 - PONG-T14 paused freezes; resume toggle does not advance
+not ok 14 - PONG-T14 paused freezes; resume toggle does not advance
   ---
-  duration_ms: 0.1561
+  duration_ms: 0.2251
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:86:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    +   status: 'paused'
+    -   status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+  actual:
+    status: 'paused'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:90:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T15 reset restores values with fresh nested objects
-ok 15 - PONG-T15 reset restores values with fresh nested objects
+not ok 15 - PONG-T15 reset restores values with fresh nested objects
   ---
-  duration_ms: 0.5311
+  duration_ms: 0.1289
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:93:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" to be strictly unequal to:
+    
+    undefined
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'notStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:96:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T16 same state/input/dt gives identical results
-ok 16 - PONG-T16 same state/input/dt gives identical results
+not ok 16 - PONG-T16 same state/input/dt gives identical results
   ---
-  duration_ms: 0.1192
+  duration_ms: 0.0667
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:98:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:99:11)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T17 original and nested objects are not mutated or aliased
-ok 17 - PONG-T17 original and nested objects are not mutated or aliased
+not ok 17 - PONG-T17 original and nested objects are not mutated or aliased
   ---
-  duration_ms: 0.0991
+  duration_ms: 0.1535
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:102:1'
+  failureType: 'testCodeFailure'
+  error: 'Expected "actual" not to be reference-equal to "expected": {}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+  operator: 'notStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:106:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T18 invalid dt throws RangeError
-ok 18 - PONG-T18 invalid dt throws RangeError
+not ok 18 - PONG-T18 invalid dt throws RangeError
   ---
-  duration_ms: 0.2999
+  duration_ms: 0.1905
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:110:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception (RangeError): dt=-0.01'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:112:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T19 opposite directions cancel for each paddle
-ok 19 - PONG-T19 opposite directions cancel for each paddle
+not ok 19 - PONG-T19 opposite directions cancel for each paddle
   ---
-  duration_ms: 0.0885
+  duration_ms: 0.0773
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:114:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'y')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:116:23)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T20 swept paddle collision prevents tunneling
-ok 20 - PONG-T20 swept paddle collision prevents tunneling
+not ok 20 - PONG-T20 swept paddle collision prevents tunneling
   ---
-  duration_ms: 0.0877
+  duration_ms: 0.0591
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:118:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:119:16)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T21 dt zero causes no movement or scoring
-ok 21 - PONG-T21 dt zero causes no movement or scoring
+not ok 21 - PONG-T21 dt zero causes no movement or scoring
   ---
-  duration_ms: 0.0933
+  duration_ms: 0.1248
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:123:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'paused'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'paused'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:126:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 # Subtest: PONG-T22 moving away from paddle does not re-trigger collision
-ok 22 - PONG-T22 moving away from paddle does not re-trigger collision
+not ok 22 - PONG-T22 moving away from paddle does not re-trigger collision
   ---
-  duration_ms: 0.0654
+  duration_ms: 0.0691
   type: 'test'
+  location: 'C:\\Repos\\pong_swen_6936\\Pong_Test_Harness_v1\\tests\\pong.test.mjs:128:1'
+  failureType: 'testCodeFailure'
+  error: 'Cannot convert undefined or null to object'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    Object.assign (<anonymous>)
+    stateWith (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:14:20)
+    TestContext.<anonymous> (file:///C:/Repos/pong_swen_6936/Pong_Test_Harness_v1/tests/pong.test.mjs:129:16)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
   ...
 1..22
 # tests 22
 # suites 0
-# pass 22
-# fail 0
+# pass 0
+# fail 22
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 58.2841
+# duration_ms 68.3338

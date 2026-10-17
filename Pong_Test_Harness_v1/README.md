@@ -18,8 +18,8 @@ Use CP-05 in the prompt protocol after capturing the untouched CP-02 initial imp
 ## Validation of the harness itself
 
 ```bash
-npm run selftest
-npm run negative
+npm.cmd run selftest
+npm.cmd run negative
 ```
 
 - `selftest` should PASS 22/22 against the deliberately separate reference fixture.
