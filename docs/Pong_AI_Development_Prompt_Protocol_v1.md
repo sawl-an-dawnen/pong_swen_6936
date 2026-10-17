@@ -91,7 +91,7 @@ At each checkpoint record: `checkpoint_id`, tool, start/end time, prompt text, c
 
 **Paste:**
 
-> CP-08: Produce a concise final engineering report for this Pong implementation based only on the actual checkpoint log, saved code, and observed test results. Include: requirements completed/unverified, first-run versus final unit-test counts, browser acceptance outcomes, defects and fixes, unresolved issues, AI repair attempts, human interventions, elapsed time, and strengths/weaknesses of this tool. Clearly separate measured facts from interpretations. Do not fabricate missing data. This report will later be compared against a second tool using the same SRS and tests.
+> CP-08: Produce a concise final engineering report for this Pong implementation based only on the actual checkpoint log, saved code, and observed test results. Include: requirements completed/unverified, first-run versus final unit-test counts, browser acceptance outcomes, defects and fixes, unresolved issues, AI repair attempts, human interventions, elapsed time, and strengths/weaknesses of this tool. Clearly separate measured facts from interpretations. Do not fabricate missing data. This report will later be compared against a second tool using the same SRS and tests. Provide this report as markdown.
 
 **Gate:** Report matches evidence. **Human action:** Save the report and final Git commit/snapshot.
 
