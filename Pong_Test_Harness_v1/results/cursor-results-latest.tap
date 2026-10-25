@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: PONG-T01 initial state exact public values
+ok 1 - PONG-T01 initial state exact public values
+  ---
+  duration_ms: 1.0487
+  type: 'test'
+  ...
+# Subtest: PONG-T02 left paddle moves upward 30 px
+ok 2 - PONG-T02 left paddle moves upward 30 px
+  ---
+  duration_ms: 0.4459
+  type: 'test'
+  ...
+# Subtest: PONG-T03 right paddle moves downward 30 px
+ok 3 - PONG-T03 right paddle moves downward 30 px
+  ---
+  duration_ms: 0.1029
+  type: 'test'
+  ...
+# Subtest: PONG-T04 paddle y clamped at both boundaries
+ok 4 - PONG-T04 paddle y clamped at both boundaries
+  ---
+  duration_ms: 0.1183
+  type: 'test'
+  ...
+# Subtest: PONG-T05 ball advances exactly in collision-free update
+ok 5 - PONG-T05 ball advances exactly in collision-free update
+  ---
+  duration_ms: 0.1197
+  type: 'test'
+  ...
+# Subtest: PONG-T06 top wall reflects with overshoot resolution
+ok 6 - PONG-T06 top wall reflects with overshoot resolution
+  ---
+  duration_ms: 0.1331
+  type: 'test'
+  ...
+# Subtest: PONG-T07 bottom wall reflects with overshoot resolution
+ok 7 - PONG-T07 bottom wall reflects with overshoot resolution
+  ---
+  duration_ms: 0.13
+  type: 'test'
+  ...
+# Subtest: PONG-T08 left paddle reverses vx without changing vy
+ok 8 - PONG-T08 left paddle reverses vx without changing vy
+  ---
+  duration_ms: 0.1779
+  type: 'test'
+  ...
+# Subtest: PONG-T09 right paddle reverses vx without changing vy
+ok 9 - PONG-T09 right paddle reverses vx without changing vy
+  ---
+  duration_ms: 0.125
+  type: 'test'
+  ...
+# Subtest: PONG-T10 right exit awards left point once
+ok 10 - PONG-T10 right exit awards left point once
+  ---
+  duration_ms: 0.1875
+  type: 'test'
+  ...
+# Subtest: PONG-T11 left exit awards right point once
+ok 11 - PONG-T11 left exit awards right point once
+  ---
+  duration_ms: 0.1241
+  type: 'test'
+  ...
+# Subtest: PONG-T12 score resets ball, alternates serves, preserves paddles
+ok 12 - PONG-T12 score resets ball, alternates serves, preserves paddles
+  ---
+  duration_ms: 0.1537
+  type: 'test'
+  ...
+# Subtest: PONG-T13 pause toggle changes status without movement
+ok 13 - PONG-T13 pause toggle changes status without movement
+  ---
+  duration_ms: 0.0816
+  type: 'test'
+  ...
+# Subtest: PONG-T14 paused freezes; resume toggle does not advance
+ok 14 - PONG-T14 paused freezes; resume toggle does not advance
+  ---
+  duration_ms: 0.1711
+  type: 'test'
+  ...
+# Subtest: PONG-T15 reset restores values with fresh nested objects
+ok 15 - PONG-T15 reset restores values with fresh nested objects
+  ---
+  duration_ms: 0.117
+  type: 'test'
+  ...
+# Subtest: PONG-T16 same state/input/dt gives identical results
+ok 16 - PONG-T16 same state/input/dt gives identical results
+  ---
+  duration_ms: 0.1067
+  type: 'test'
+  ...
+# Subtest: PONG-T17 original and nested objects are not mutated or aliased
+ok 17 - PONG-T17 original and nested objects are not mutated or aliased
+  ---
+  duration_ms: 0.1248
+  type: 'test'
+  ...
+# Subtest: PONG-T18 invalid dt throws RangeError
+ok 18 - PONG-T18 invalid dt throws RangeError
+  ---
+  duration_ms: 0.3103
+  type: 'test'
+  ...
+# Subtest: PONG-T19 opposite directions cancel for each paddle
+ok 19 - PONG-T19 opposite directions cancel for each paddle
+  ---
+  duration_ms: 0.0854
+  type: 'test'
+  ...
+# Subtest: PONG-T20 swept paddle collision prevents tunneling
+ok 20 - PONG-T20 swept paddle collision prevents tunneling
+  ---
+  duration_ms: 0.0853
+  type: 'test'
+  ...
+# Subtest: PONG-T21 dt zero causes no movement or scoring
+ok 21 - PONG-T21 dt zero causes no movement or scoring
+  ---
+  duration_ms: 0.0857
+  type: 'test'
+  ...
+# Subtest: PONG-T22 moving away from paddle does not re-trigger collision
+ok 22 - PONG-T22 moving away from paddle does not re-trigger collision
+  ---
+  duration_ms: 0.0584
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 80.0409
